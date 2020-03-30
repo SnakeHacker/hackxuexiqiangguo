@@ -1,4 +1,4 @@
-# FUCK XUEXIQIANGGUO
+# HACK XUEXIQIANGGUO
 
 # 项目初衷
 加班繁忙，没时间刷学习强国，无奈支部要求每天达到25积分，写个脚本刷一下。
