@@ -19,16 +19,11 @@ PAGE_NUMS = 10
 VIDEO_NUMS = 5
 
 
-def start_fuck(debug):
+def start_fuck():
     desired_capabilities = DesiredCapabilities.CHROME
     desired_capabilities["pageLoadStrategy"] = "none"
     chrome_options = Options()
-    if not debug:
-        # 是否展示界面，debug时候用得到
-        chrome_options.add_argument('--headless')
-        chrome_options.add_argument('--no-sandbox')
-        chrome_options.add_argument('--disbale-dev-shm-usage')
-    browser = webdriver.Chrome(chrome_options=chrome_options)
+    browser = webdriver.Chrome(options=chrome_options)
     browser.implicitly_wait(20)
     browser.get(LOGIN_URL)
     time.sleep(15)
@@ -110,10 +105,4 @@ def start_fuck(debug):
 
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser()
-    parser.add_argument('--debug', type=bool, default=False)
-
-    args = parser.parse_args()
-
-    debug = args.debug
-    start_fuck(debug)
+    start_fuck()

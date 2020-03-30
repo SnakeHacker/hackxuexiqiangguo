@@ -1,5 +1,5 @@
 run:
-	python3 fuck.py --debug=true
+	python3 fuck.py
 
 install:
 	pip install -r requirements.txt
