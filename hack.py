@@ -19,7 +19,7 @@ PAGE_NUMS = 10
 VIDEO_NUMS = 5
 
 
-def start_fuck():
+def start_hack():
     desired_capabilities = DesiredCapabilities.CHROME
     desired_capabilities["pageLoadStrategy"] = "none"
     chrome_options = Options()
@@ -105,4 +105,4 @@ def start_fuck():
 
 
 if __name__ == '__main__':
-    start_fuck()
+    start_hack()
