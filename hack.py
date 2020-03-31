@@ -1,19 +1,16 @@
 from selenium import webdriver
 import time
 from random import randint
-import argparse
-import sys
 import socket
 socket.setdefaulttimeout(30)
 
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 from selenium.webdriver.chrome.options import Options
-from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
 
 
-FUCK_URL = "https://www.xuexi.cn/"
+HACK_URL = "https://www.xuexi.cn/"
 LOGIN_URL = 'https://pc.xuexi.cn/points/login.html'
 PAGE_NUMS = 10
 VIDEO_NUMS = 5
@@ -25,10 +22,12 @@ def start_hack():
     chrome_options = Options()
     browser = webdriver.Chrome(options=chrome_options)
     browser.implicitly_wait(20)
+
+    # 扫码登录
     browser.get(LOGIN_URL)
     time.sleep(15)
 
-    browser.get(FUCK_URL)
+    browser.get(HACK_URL)
     time.sleep(5)
 
     handle = browser.current_window_handle
@@ -39,7 +38,7 @@ def start_hack():
         global PAGE_NUMS
         if PAGE_NUMS == 0:
             break
-        PAGE_NUMS-=1
+        PAGE_NUMS -= 1
 
         print(news.text)
         news.click()
@@ -60,17 +59,19 @@ def start_hack():
             if newhandle != handle:
                 browser.switch_to.window(newhandle)
                 browser.close()
-        browser.switch_to_window(handle)
-    
+        browser.switch_to.window(handle)
+
+    # 视频新闻
     dypd = browser.find_element_by_xpath("//div[text()='第一频道']")
     time.sleep(5)
     dypd.click()
     time.sleep(3)
+
+    browser.close()
     handles = browser.window_handles
-    for newhandle in handles:
-        if newhandle != handle:
-            browser.switch_to.window(newhandle)
-    # 视频新闻
+    handle = handles[0]
+    browser.switch_to.window(handle)
+    
     video_news = browser.find_elements_by_class_name("textWrapper")
     for news in video_news:
         global VIDEO_NUMS
@@ -100,9 +101,8 @@ def start_hack():
                 browser.close()
         browser.switch_to_window(handle)
 
-    time.sleep(10)
+    time.sleep(5)
     print("今日份已刷完")
-
 
 if __name__ == '__main__':
     start_hack()
