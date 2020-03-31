@@ -12,8 +12,8 @@ from selenium.webdriver.common.action_chains import ActionChains
 
 HACK_URL = "https://www.xuexi.cn/"
 LOGIN_URL = 'https://pc.xuexi.cn/points/login.html'
-PAGE_NUMS = 10
-VIDEO_NUMS = 5
+PAGE_NUMS = 7
+VIDEO_NUMS = 7
 
 
 def start_hack():
