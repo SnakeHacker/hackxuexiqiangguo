@@ -91,7 +91,7 @@ SQLAlchemy==1.3.13
 stable-baselines==2.9.0
 -e git+git@github.com:SnakeHacker/tbase.git@eb78d921c93a7daa1cd43aeb325cfabcbb6e74e8#egg=tbase
 tensorboard==2.0.0
-tensorflow==2.0.1
+tensorflow==2.5.1
 tensorflow-estimator==2.0.1
 termcolor==1.1.0
 -e git+git@github.com:SnakeHacker/tgym.git@7136adff5fcc40439f995c989a9d0bc15c8eba94#egg=tgym
