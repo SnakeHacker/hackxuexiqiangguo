@@ -57,7 +57,7 @@ pandas==0.25.3
 pandas-datareader==0.8.1
 pika==1.1.0
 Pillow==7.0.0
-pipenv==2018.11.26
+pipenv==2022.1.8
 portalocker==1.5.2
 protobuf==3.11.2
 psutil==5.6.7
