@@ -49,7 +49,7 @@ mccabe==0.6.1
 mpl-finance==0.10.1
 mplfinance==0.12.3a3
 nibabel==3.0.1
-numpy==1.16.0
+numpy==1.22.0
 opencv-contrib-python==4.2.0.32
 opencv-python==4.2.0.32
 opt-einsum==3.1.0
